@@ -9,14 +9,14 @@ export default {
 </script>
 
 <template>
-    <div class="img-ctn">
+    <div class="img">
         <img src="../assets/images/logo.png" class="img-fluid" alt="logo">
     </div>
 </template>
 
 <style lang="scss" scoped>
 
-.img-ctn {
+.img {
     height: 50px;
     width: 50px;
     margin: 10px;
