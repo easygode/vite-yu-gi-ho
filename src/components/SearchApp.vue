@@ -15,9 +15,13 @@ export default {
         <select class="form-select ms-select" aria-label="Default select example" v-model="search">
             <option value="" disabled selected hidden>Search Card</option>
             <option value="alien">Alien</option>
-            <option value="melodius">Melodius</option>
-            <option value="elemental">Elemental</option>
-            <option value="knight">Noble Knight</option>
+            <option value="knight">Knights</option>
+            <option value="breeding">Breeding and Incubator</option>
+            <option value="chants">Songs and Chants</option>
+            <option value="deal">Deals</option>
+            <option value="hero">Heroes</option>
+            <option value="dark">Evils</option>
+            <option value="legend">Legends</option>
     </select>
     </div>
 </template>
