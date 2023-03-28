@@ -12,7 +12,7 @@ export default {
 
 <template>
     <div class="container mb-3">
-        <select class="form-select ms-select" aria-label="Default select example">
+        <select class="form-select ms-select" aria-label="Default select example" v-model="searckKey">
             <option value="alien">Alien</option>
             <option value="melodius">Melodius</option>
             <option value="elemental">Elemental</option>
