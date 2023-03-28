@@ -18,7 +18,7 @@ export default {
     axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php') 
     .then((response) => {
       this.store.cards = response.data.data;
-      this.store.limitedCards = this.store.cards.slice(50, 150).length;
+      this.store.limitedCards = this.store.cards.slice(0, 52).length;
     })
   }
 }
