@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Vite Yu Gi Oh
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Api Project Yu Gi Oh Cards
+Api URL: https://db.ygoprodeck.com/api/v7/cardinfo.php
 
-## Recommended IDE Setup
+This project uses Boostrap CSS and Axios library
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Run project
+- npm install
+- npm run dev
+
