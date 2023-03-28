@@ -21,7 +21,7 @@ export default {
             </div>
             <div class="row gy-2">
                 <div class="card-list col-12 col-md-4 col-lg-3 d-flex align-items-stretch"  v-for="(card, index) in store.cards.slice(0, 52)">
-                    <CardApp :img="card.card_images[0].image_url"  :name="card.name.toUpperCase()" :species="card.archetype"/>
+                    <CardApp :img="card.card_images[0].image_url"  :name="card.name.toUpperCase()" :archetype="card.archetype"/>
                 </div>
             </div>
             <div class="loader-ctn d-flex justify-content-center p-3">

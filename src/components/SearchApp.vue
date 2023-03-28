@@ -12,7 +12,7 @@ export default {
 
 <template>
     <div class="container mb-3">
-        <select class="form-select ms-select" aria-label="Default select example" v-model="search">
+        <select @onChange.prevent="$emit('searchCards')"> class="form-select ms-select" aria-label="Default select example" v-model="search">
             <option value="" disabled selected hidden>Search Card</option>
             <option value="alien">Alien</option>
             <option value="knight">Knights</option>
