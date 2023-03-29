@@ -20,7 +20,7 @@ export default {
                 <span>Found {{ store.limitedCards }} cards</span>
             </div>
             <div class="row gy-2">
-                <div class="card-list col-12 col-md-4 col-lg-3 d-flex align-items-stretch"  v-for="(card, index) in store.cards.slice(0, 52)">
+                <div class="card-list col-12 col-md-4 col-lg-3 d-flex align-items-stretch"  v-for="card in store.cards.slice(0, 52)" :key="card.id">
                     <CardApp :img="card.card_images[0].image_url"  :name="card.name.toUpperCase()" :archetype="card.archetype"/>
                 </div>
             </div>

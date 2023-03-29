@@ -4,17 +4,21 @@ import CardContainer from './CardContainer.vue';
 
 export default {
     name: 'Main',
-
     components: {
         SearchApp,
         CardContainer
+    },
+    methods: {
+        filterSearch(){
+            this.$emit('filterType')
+        }
     }
 }
 </script>
 
 <template>
     <main class="d-flex flex-column align-items-center justify-content-center py-5">
-        <SearchApp></SearchApp>
+        <SearchApp @filter="filterSearch"></SearchApp>
         <CardContainer></CardContainer>
     </main>
 
