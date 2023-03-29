@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div class="container mb-3">
-        <select class="form-select ms-select" aria-label="Default select example" @change="$emit('filter')" v-model="store.searchSelect">
+        <select class="form-select ms-select" aria-label="Default select example" @filter="$emit('filter')" v-model="store.searchSelect">
             <option value="" disabled selected hidden>Search Card</option>
             <option :value="archetype.archetype_name" v-for="archetype in store.archetypes"> {{ archetype.archetype_name }}</option>
     </select>

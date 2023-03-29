@@ -32,17 +32,18 @@ export default {
       this.store.cards = [];
       this.store.limitedCards = 0;
     })
+  }  
   },
   created(){
     this.search();
   }
-}}
+}
 
 </script>
 
 <template>
   <HeaderApp></HeaderApp>
-  <MainApp></MainApp>
+  <MainApp @filter="search"></MainApp>
 </template>
 
 <style lang="scss" scoped>
