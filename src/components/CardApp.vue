@@ -15,7 +15,7 @@ export default {
         </div>
         <div class="card-text p-2">
             <h3 class="text-center">{{ name }}</h3>
-            <h4 class="fs-5 text-center p-2">{{ archetype }}</h4>
+            <h4 class="fs-5 text-center p-2"><span>Species:</span> {{ archetype }}</h4>
         </div>
     </div>
 </template>
@@ -31,7 +31,11 @@ export default {
     }
 
     h4 {
-        color: red;
+        color: white;
+        span {
+            color: rgb(103, 52, 52);
+            font-style: oblique;
+        }
     }
 }
 </style>

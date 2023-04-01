@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         filterSearch(){
-            this.$emit('filter')
+            this.$emit('selected')
         }
     }
 }

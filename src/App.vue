@@ -3,30 +3,35 @@ import axios from 'axios';
 import { store } from './store';
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
+import SearchApp from './components/SearchApp.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderApp,
-    MainApp
+    MainApp,
+    SearchApp
   },
   data() {
     return {
-      store
+      store,
+      archetypes: []
     }
   },
   methods: {
     search(){
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', {
+      console.log(store.searchKey),
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php', 
+      {
         params: {
-          archetype: store.searchSelect,
+          archetype: store.searchKey,
       }
     })
     .then((response) => {
       this.store.cards = response.data.data;
-      this.store.limitedCards = this.store.cards.slice(0, 52).length;
+      this.store.limitedCards = this.store.cards.slice(0, 144).length;
       this.store.limitedCards = 0;
-      this.store.loading = false;
+      this.store.loading = true;
     })
     .catch ((error)=>{
       this.store.cards = [];
@@ -43,7 +48,8 @@ export default {
 
 <template>
   <HeaderApp></HeaderApp>
-  <MainApp @filter="search"></MainApp>
+  <MainApp></MainApp>
+  <SearchApp @ricerca="search"></SearchApp>
 </template>
 
 <style lang="scss" scoped>
